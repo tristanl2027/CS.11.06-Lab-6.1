@@ -62,11 +62,11 @@ Pause. Slowly take a deep breath. In through the nose, hold it for five seconds,
 
 **Challenge 1**
 
-Brooke is minding her own business on her ship at sea when BOOM! Amboise fires a torpedo that hits her ship and puts a massive hole in the side of it. Water begins gushing into the hull. Brooke, never one to become frazzled by events even as strenuous as having someone sink her own ship, cooly seeks refuge in a submarine she has prepared for such emergencies under the deck. She climbs aboard her submarine and launches it into the water. 
+Izzy is minding her own business on her ship at sea when BOOM! Zhongmou fires a torpedo that hits her ship and puts a massive hole in the side of it. Water begins gushing into the hull. Izzy, never one to become frazzled by events even as strenuous as having someone sink her own ship, cooly seeks refuge in a submarine she has prepared for such emergencies under the deck. She climbs aboard her submarine and launches it into the water. 
 
 As the submarine drops below the surface of the ocean, it automatically performs a sonar sweep of the nearby sea floor. On a small screen, the sonar sweep report (your puzzle input) appears: each line is a measurement of the sea floor depth as the sweep looks further and further away from the submarine.
 
-For example, suppose Brooke had the following report:
+For example, suppose Izzy had the following report:
 
 199
 
@@ -90,7 +90,7 @@ For example, suppose Brooke had the following report:
 
 This report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and so on.
 
-The first order of business is to figure out how quickly the depth increases, just so Brooke knows what she’s dealing with. The lower Brooke can keep under the ocean surface, the less likely Amboise will be able to pick her up on radar.
+The first order of business is to figure out how quickly the depth increases, just so Izzy knows what she’s dealing with. The lower Izzy can keep under the ocean surface, the less likely Zhongmou will be able to pick her up on radar.
 
 To do this, count the number of times a depth measurement increases from the previous measurement. (There is no measurement before the first measurement.) In the example above, the changes are as follows:
 
@@ -116,7 +116,7 @@ To do this, count the number of times a depth measurement increases from the pre
 
 In this example, there are seven measurements that are larger than the previous measurement.
 
-Using the **inputOneTwo.txt** file, write a method called **challengeOne** that takes a parameter (the name of the input text file) and returns the answer to the following question and help Brooke avoid detection from Amboise:
+Using the **inputOneTwo.txt** file, write a method called **challengeOne** that takes a parameter (the name of the input text file) and returns the answer to the following question and help Izzy avoid detection from Zhongmou:
 
 How many measurements are larger than the previous measurement? 
 
@@ -125,7 +125,7 @@ Answer 	__________________
 
 **Challenge 2**
 
-Considering every single measurement isn't as useful as Brooke expected: there's just too much noise in the data. Instead, consider sums of a three-measurement sliding window. Again, considering the above example:
+Considering every single measurement isn't as useful as Izzy expected: there's just too much noise in the data. Instead, consider sums of a three-measurement sliding window. Again, considering the above example:
 
 199  A  
 
@@ -171,7 +171,7 @@ H: 792 (increased)
 
 In this example, there are 5 sums that are larger than the previous sum.
 
-Using the **inputOneTwo.txt** file, write a method called **challengeTwo** that has a parameter (the name of the file) and returns the answer to the following question and continue to help Brooke avoid detection from Amboise:
+Using the **inputOneTwo.txt** file, write a method called **challengeTwo** that has a parameter (the name of the file) and returns the answer to the following question and continue to help Izzy avoid detection from Zhongmou:
 
 Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
 
@@ -180,9 +180,9 @@ Answer 	__________________
 
 **Challenge 3**
 
-Now, Brooke needs to figure out how to pilot this thing.
+Now, Izzy needs to figure out how to pilot this thing.
 
-It seems like Brooke’s submarine can take a series of commands like forward 1, down 2, or up 3:
+It seems like Izzy’s submarine can take a series of commands like forward 1, down 2, or up 3:
 
 * forward X increases the horizontal position by X units.
 
@@ -192,7 +192,7 @@ It seems like Brooke’s submarine can take a series of commands like forward 1,
 
 Note that since she’s on a submarine, down and up affect her depth, and so they have the opposite result of what she might expect.
 
-The submarine seems to already have a planned course (your puzzle input). You should probably figure out where Brooke’s going. For example:
+The submarine seems to already have a planned course (your puzzle input). You should probably figure out where Izzy’s going. For example:
 
 forward 5
 
@@ -222,16 +222,16 @@ Her horizontal position and depth both start at 0. The steps above would then mo
 
 After following these instructions, she would have a horizontal position of 15 and a depth of 10. (Multiplying these together produces 150.)
 
-  Using the **inputThreeFour.txt** file, write a method called **challengeThree** that calculates the horizontal position and depth Brooke would have after following the planned course, and returns the answer to the following question:
+  Using the **inputThreeFour.txt** file, write a method called **challengeThree** that calculates the horizontal position and depth Izzy would have after following the planned course, and returns the answer to the following question:
 
-What do you get if you multiply Brooke’s final horizontal position by her final depth?
+What do you get if you multiply Izzy’s final horizontal position by her final depth?
 
 Answer 	__________________
 
 
 **Challenge 4**
 
-Based on her calculations, Brooke’s planned course doesn't seem to make any sense. She finds the submarine manual and discovers that the process is actually slightly more complicated.
+Based on her calculations, Izzy’s planned course doesn't seem to make any sense. She finds the submarine manual and discovers that the process is actually slightly more complicated.
 
 In addition to horizontal position and depth, she also needs to track a third value, aim, which also starts at 0. The commands also mean something entirely different than she first thought:
 
@@ -245,7 +245,7 @@ In addition to horizontal position and depth, she also needs to track a third va
 
 * It increases her depth by her aim multiplied by X.
 
-Again note that since Brooke’s on a submarine, down and up do the opposite of what she might expect: "down" means aiming in the positive direction.
+Again note that since Izzy’s on a submarine, down and up do the opposite of what she might expect: "down" means aiming in the positive direction.
 
 forward 5
 
@@ -261,7 +261,7 @@ forward 2
 
 Now, the above example does something different:
 
-* forward 5 adds 5 to Brooke’s horizontal position, a total of 5. Because her aim is 0, her depth does not change.
+* forward 5 adds 5 to Izzy’s horizontal position, a total of 5. Because her aim is 0, her depth does not change.
 
 * down 5 adds 5 to her aim, resulting in a value of 5.
 
@@ -273,9 +273,9 @@ Now, the above example does something different:
 
 * forward 2 adds 2 to her horizontal position, a total of 15. Because her aim is 10, her depth increases by 2*10=20 to a total of 60.
 
-After following these new instructions, Brooke would have a horizontal position of 15 and a depth of 60. (Multiplying these produces 900.)
+After following these new instructions, Izzy would have a horizontal position of 15 and a depth of 60. (Multiplying these produces 900.)
 
-Using the **inputThreeFour.txt** file, write a method called **challengeFour** that, using this new interpretation of the commands, calculates the horizontal position and depth Brooke would have after following the planned course, and returns the answer to the following question:
+Using the **inputThreeFour.txt** file, write a method called **challengeFour** that, using this new interpretation of the commands, calculates the horizontal position and depth Izzy would have after following the planned course, and returns the answer to the following question:
 
 What do you get if you multiply her final horizontal position by her final depth?
 
